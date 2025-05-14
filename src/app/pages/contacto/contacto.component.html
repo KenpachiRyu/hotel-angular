@@ -1,0 +1,54 @@
+<section class="informacion-equipo">
+  <h2>Equipo de Desarrollo</h2>
+  <div class="equipo">
+    <img src="yo.jpeg" alt="Tu Nombre" class="foto-equipo">
+    <div class="detalles-equipo">
+      <h3>Héctor Oswaldo Villegas Pérez</h3>
+      <p>Desarrollador Web y creador General de la página. Este sistema fue diseñado como parte de un proyecto de la Benemérita Universidad Autónoma de Aguascalientes (UAA), las imagenes usadas no son de mi propieda y fueron usadas sin fines de lucro. Gracias a quienes han creído en mí.</p>
+    </div>
+  </div>
+</section>
+
+<section class="formulario-contacto">
+  <h2>Formulario de Contacto</h2>
+  <form [formGroup]="contactoForm" (ngSubmit)="enviarFormulario()">
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" formControlName="nombre" class="form-control" />
+      <div class="text-danger" [hidden]="!contactoForm.get('nombre')?.touched || contactoForm.get('nombre')?.valid">
+        El nombre es obligatorio
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo Electrónico</label>
+      <input id="email" formControlName="email" type="email" class="form-control" />
+      <div class="text-danger" [hidden]="!contactoForm.get('email')?.touched || contactoForm.get('email')?.valid">
+        Ingresa un correo válido
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" formControlName="mensaje" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" id="aceptaInfo" formControlName="aceptaInfo" class="form-check-input" />
+      <label for="aceptaInfo" class="form-check-label">Acepto envío de información sobre productos</label>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" id="aceptaTerminos" formControlName="aceptaTerminos" class="form-check-input" />
+      <label for="aceptaTerminos" class="form-check-label">Acepto términos y condiciones *</label>
+      <div class="text-danger" [hidden]="!contactoForm.get('aceptaTerminos')?.touched || contactoForm.get('aceptaTerminos')?.valid">
+        Debes aceptar los términos
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!contactoForm.valid">
+      Enviar
+    </button>
+  </form>
+</section>

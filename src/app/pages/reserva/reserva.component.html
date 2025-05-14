@@ -1,0 +1,108 @@
+<div class="formulario-container">
+  <h2>Reserva ahora:</h2>
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-indicators">
+    @for (habitacion of habitaciones; let i = $index; track i) {
+      <button
+        type="button"
+        data-bs-target="#carouselExample"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+        [attr.aria-label]="'Slide ' + (i + 1)"
+        [attr.aria-current]="i === 0 ? 'true' : null">
+      </button>
+    }
+  </div>
+
+  <!-- Slides del carrusel -->
+  <div class="carousel-inner">
+    @for (habitacion of habitaciones; let i = $index; track habitacion.tipo) {
+      <div class="carousel-item" [class.active]="i === 0" (click)="seleccionarHabitacion(habitacion)">
+        <img [src]="habitacion.imagen" class="d-block w-100 img-fluid"
+             alt="Habitación {{ i + 1 }}"
+             style="height: 400px; object-fit: cover;">
+
+        @if (habitacionSeleccionada?.tipo === habitacion.tipo) {
+          <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+            <strong>Seleccionada</strong>
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- Controles del carrusel -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+
+  <!-- Formulario de reserva -->
+  <div class="mb-3">
+    <label for="fecha" class="form-label">Fecha de reservación:</label>
+    <input type="date" id="fecha" class="form-control" [min]="fechaHoy" [(ngModel)]="fechaReserva" />
+  </div>
+
+  <!-- Mostrar información solo si una habitación ha sido seleccionada -->
+  @if (habitacionSeleccionada) {
+    <h4>Habitación seleccionada: {{ habitacionSeleccionada.nombre }}</h4>
+    <p>Precio: {{ habitacionSeleccionada.precio | currency:'MXN':'symbol' }}</p>
+
+    <div class="contador">
+      <label>Noches</label>
+      <div class="control">
+        <button (click)="decrementar('noche')">-</button>
+        <span>{{ noches }}</span>
+        <button (click)="incrementar('noche')">+</button>
+      </div>
+    </div>
+
+    <div class="contador">
+      <label>Huéspedes</label>
+      <div class="control">
+        <button (click)="decrementar('huesped')" [disabled]="huespedes <= 1">-</button>
+        <span>{{ huespedes }}</span>
+        <button (click)="incrementar('huesped')" [disabled]="huespedes >= maxHuespedes">+</button>
+      </div>
+    </div>
+
+    <div class="extras">
+      <label class="serv">Servicios extra:</label>
+      @for (extra of extras; track extra.nombre) {
+        <div>
+          <input type="checkbox" [(ngModel)]="extra.selected" />
+          {{ extra.nombre }} (+{{ extra.precio | currency:'MXN':'symbol' }})
+        </div>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="nombreCliente" class="form-label">Tu nombre:</label>
+      <input id="nombreCliente" class="form-control" [(ngModel)]="nombreCliente" name="nombreCliente" required />
+      <div class="text-danger" [hidden]="nombreCliente">El nombre es obligatorio</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="correoCliente" class="form-label">Tu correo:</label>
+      <input id="correoCliente" class="form-control" [(ngModel)]="correoCliente" name="correoCliente" type="email" required />
+      <div class="text-danger" [hidden]="correoCliente && correoCliente.includes('@')">Correo electrónico inválido</div>
+    </div>
+
+    <div class="total">
+      Total: {{ total | currency:'MXN':'symbol' }}
+    </div>
+
+    <button class="reservar-btn"
+            [disabled]="!habitacionSeleccionada || !fechaReserva || !nombreCliente || !correoCliente.includes('@')"
+            (click)="reservar()">
+      Reservar
+    </button>
+  }
+</div>

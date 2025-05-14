@@ -1,0 +1,248 @@
+.iniciar-sesion-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f7f5f2; /* Fondo del formulario */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  color: #5c4d41; /* Título */
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #4e3c2d; /* Etiquetas */
+}
+
+input.form-control {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+button.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #5c4d41;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-primary:disabled {
+  background-color: #d6d6d6;
+}
+
+button.btn-primary:hover {
+  background-color: #4a3b32;
+}
+
+.text-danger {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+}
+
+.sesion-iniciada .iniciar-sesion-container {
+  display: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para las tablas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: #f7f5f2;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #5c4d41;
+  color: white;
+}
+
+.table td {
+  background-color: #fff;
+}
+
+.table tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+button.btn-sm {
+  font-size: 14px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: white;
+}
+
+button.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+button.btn-secondary {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  display: none;
+  padding: 10px 20px;
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.sesion-iniciada button.btn-secondary {
+  display: block;
+}
+
+p {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+}
+
+/* Estilo para los cuadros de notificación */
+.swal2-popup {
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.swal2-title {
+  font-size: 18px;
+}
+
+.swal2-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo del contenedor de los botones */
+.mt-4 {
+  margin-top: 20px;
+}
+
+/* Estilo de los mensajes de error y éxito */
+.text-danger {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Estilo del total */
+.total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3c2b1a; /* Texto del total */
+  margin-top: 20px;
+}
+
+/* Estilo para los contadores */
+.contador {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.control button {
+  background-color: #f7f5f2;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.control span {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+
+/* Estilo para los extras */
+.extras label.serv {
+  font-weight: bold;
+  color: #6c4f3d; /* Etiquetas de extras */
+}
+
+.extras div {
+  margin-bottom: 10px;
+}
+
+.extras input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button.reservar-btn {
+  background-color: #5c4d41; /* Botón reservar normal */
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.reservar-btn:hover {
+  background-color: #4a3b32; /* Botón reservar hover */
+}

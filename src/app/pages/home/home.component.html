@@ -1,0 +1,89 @@
+<section class="bienvenida">
+  <h2>Bienvenido, Preparate para disfrutar una experiencia muy especial</h2>
+</section>
+
+<div class="video-container text-center">
+  <iframe
+    width="1000"
+    height="500"
+    [src]="videoUrl | safeUrl"
+    title="Video del hotel"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
+
+<section class="historia">
+  <div class="historia-contenido">
+    <div class="historia-texto">
+      <h3>Conoce Oswaldo's Place</h3>
+      <p>
+        Somos el hotel más antiguo y líder en el mercado hotelero de la ciudad de Guadalajara. Desde nuestra fundación en 1950 por Don Oswaldo III Antiguamente conocido como Hotel Malibu, hemos ofrecido hospitalidad con excelencia, siendo altamente recomendados por nuestros clientes por nuestra gran atención, desayunos típicos inigualables y habitaciones impecables.
+      </p>
+      <p>
+        Nuestra misión es hacer que cada huésped se sienta como en casa, brindando una experiencia cómoda, segura y personalizada. A lo largo de las décadas hemos albergado desde turistas internacionales hasta celebridades locales, convirtiéndonos en un ícono de la ciudad.
+      </p>
+      <p>
+          Entre nuestras estrellas más reconocidas se encuentra Luis Miguel.
+      <br><br>
+      <em>
+        “Es una experiencia maravillosa y placentera, en ningun lugar del mundo y como diceee me han atendido como Rey. Sin dudas volvería a su suite y restaurante.”
+      </em>
+      <br>
+        — <strong>Luis Miguel</strong>
+      </p>
+
+    </div>
+    <div class="historia-imagen">
+      <img src="luismi.jpeg" alt="Luis Miguel en el hotel">
+    </div>
+  </div>
+</section>
+
+<section class="mapa-section text-center my-4">
+  <h3>Encuéntranos en:</h3>
+  <p>Av. Vallarta 4095, Don Bosco Vallarta, Zapopan, Jalisco, México</p>
+
+  <div class="mapa-container">
+    <iframe
+      [src]="mapaUrl | safeUrl"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <h3>Preguntas Frecuentes</h3>
+  <details class="faq-item">
+    <summary>¿Sigue siendo el Hotel Malibu?</summary>
+    <p>Sí, Don Oswaldo III fundó el hotel con ese nombre, pero tras su fallecimiento en 2020 decidimos honrarlo cambiando el nombre a Oswaldo's Place. Sin embargo, aún puedes encontrarnos como Hotel Malibu en muchas plataformas.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>¿Puedo hacer check-in antes de la hora establecida?</summary>
+    <p>El check-in anticipado está sujeto a disponibilidad y puede aplicar un cargo adicional.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>¿Cuál es la hora límite para el check-out?</summary>
+    <p>La hora límite para el check-out es a las 12:00 PM. Si necesitas más tiempo, puedes solicitar una extensión en recepción, sujeta a disponibilidad.</p>
+  </details>
+
+
+  <details class="faq-item">
+    <summary>¿Qué servicios incluye la estancia?</summary>
+    <p>Incluye acceso a la piscina del hotel, desayuno al gusto, wifi de alta velocidad sin ningun limite, televisión por cable de alta definicion y estacionamiento gratuito.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>¿Se aceptan mascotas?</summary>
+    <p>Si!, aceptamos mascotas en las habitaciones, pero este tiene un costo.</p>
+  </details>
+</section>

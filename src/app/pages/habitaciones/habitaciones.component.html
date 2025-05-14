@@ -1,0 +1,23 @@
+<section class="habitaciones">
+  <h2>Conoce Nuestras Habitaciones</h2>
+
+  <div class="busqueda-container">
+    <input type="text" class="form-control busqueda-input" placeholder="Filtrar Habitaciones (ej. Precio, Tipo o Nombre)" [(ngModel)]="searchText" (input)="filtrarHabitaciones()">
+  </div>
+
+  <div class="row">
+    @for (habitacion of habitacionesFiltradas; track habitacion.tipo) {
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img [src]="habitacion.imagen" [alt]="habitacion.nombre" class="card-img-top imagen-habitacion">
+          <div class="card-body">
+            <h5 class="card-title">{{ habitacion.nombre }}</h5>
+            <p class="card-precio">{{ '$' + habitacion.precio }}</p> <!-- Agregado símbolo de pesos -->
+            <p class="card-text">{{ habitacion.descripcion }}</p>
+            <button (click)="reservar(habitacion.tipo)" class="btn btn-info">Reserva ahora</button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

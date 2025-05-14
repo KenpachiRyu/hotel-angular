@@ -1,0 +1,112 @@
+.habitaciones {
+  background-color: #f7f5f2;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.habitaciones h2 {
+  color: #5c4d41;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.busqueda-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #f7f5f2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.busqueda-input {
+  width: 60%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.busqueda-input:focus {
+  outline: none;
+  border-color: #6c4f3d;
+  box-shadow: 0 4px 8px rgba(108, 79, 61, 0.2);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.col-md-4 {
+  flex: 1 0 30%; /* Asegura que las cards ocupen un 30% del ancho disponible */
+  max-width: 33%; /* Limita el ancho máximo al 33% */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+  height: 200px; /* Fija la altura de la imagen */
+}
+
+.card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between; /* Distribuye los elementos en la card */
+}
+
+.card-title {
+  color: #5c4d41;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card-precio {
+  color: #6c4f3d;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.card-text {
+  color: #6c4f3d;
+  font-size: 1rem;
+  margin: 1rem 0;
+  flex-grow: 1; /* Asegura que el texto ocupe espacio suficiente */
+}
+
+.btn-info {
+  background-color: #5c4d41;
+  border-color: #5c4d41;
+  color: #fff;
+  padding: 8px 12px; /* Ajusta el tamaño del botón */
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-top: 10px; /* Espacio entre el texto y el botón */
+  transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+  background-color: #4a3f2c;
+  border-color: #4a3f2c;
+}

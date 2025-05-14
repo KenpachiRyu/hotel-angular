@@ -1,0 +1,137 @@
+/* === Equipo de Desarrollo === */
+.informacion-equipo {
+  background-color: #f7f5f2;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.informacion-equipo h2 {
+  color: #5c4d41;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.foto-equipo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 4px solid #e0d9d0;
+}
+
+.detalles-equipo h3 {
+  font-size: 1.5rem;
+  color: #4e3c2d;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.detalles-equipo p {
+  font-size: 1.1rem;
+  color: #6c4f3d;
+  line-height: 1.6;
+}
+
+
+/* === Formulario de Contacto === */
+.formulario-contacto {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formulario-contacto h2 {
+  color: #5c4d41;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #4e3c2d;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f7f5f2;
+  color: #3c2b1a;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Checkboxes */
+.form-check {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+.form-check-label {
+  color: #4e3c2d;
+  font-size: 0.95rem;
+}
+
+/* Errores */
+.text-danger {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Botón Enviar */
+button[type="submit"] {
+  background-color: #5c4d41;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #4a3b32;
+}
+
+button[type="submit"]:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
